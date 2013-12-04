@@ -1,0 +1,97 @@
+<div id="course">
+
+<h1><%=@course.name%></h1></br>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <div style="display:inline;"><strong>Name:</strong>
+  <h1><%= @course.name %></h1> </div>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @course.course_type %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @course.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @course.price %>
+</p>
+
+<p>
+  <strong>Address 1:</strong>
+  <%= @course.address1 %>
+</p>
+
+<p>
+  <strong>Address 2:</strong>
+  <%= @course.address2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @course.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @course.state %>
+</p>
+
+<p>
+  <strong>Photo 1:</strong>
+  <%= @course.photo1 %>
+</p>
+
+<p>
+  <strong>Photo 2:</strong>
+  <%= @course.photo2 %>
+</p>
+
+<p>
+  <strong>Photo 3:</strong>
+  <%= @course.photo3 %>
+</p>
+
+<p>
+  <strong>Minimum Age:</strong>
+  <%= @course.min_age %>
+</p>
+
+<p>
+  <strong>Maximum Age:</strong>
+  <%= @course.max_age %>
+</p>
+
+<p>
+  <strong>Minimum Class Size:</strong>
+  <%= @course.min_class_size %>
+</p>
+
+
+<p>
+  <strong>Maximum Class Size:</strong>
+  <%= @course.max_class_size %>
+</p>
+
+<p>
+  <strong>Required Gear:</strong>
+  <%= @course.required_gear %>
+</p>
+
+<p>
+  <strong>Required Gear:</strong>
+  <%= @course.required_gear_desc %>
+</p>
+
+<p>
+  <strong>Cancellation Policy:</strong>
+  <%= @course.cancellation %>
+</p>
+
+</div><!-- end course -->

@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  course_type: MyString
+  price: 1.5
+  description: MyText
+  user_id: 
+  address1: MyString
+  address2: MyString
+  city: MyString
+  state: MyString
+  zipcode: 1
+  photo1: MyString
+  photo2: MyString
+  photo3: MyString
+  min_age: 1
+  max_age: 1
+  min_class_size: 1
+  max_class_size: 1
+  required_gear: false
+  required_gear_desc: MyText
+  cancellation: MyText
+
+two:
+  name: MyString
+  course_type: MyString
+  price: 1.5
+  description: MyText
+  user_id: 
+  address1: MyString
+  address2: MyString
+  city: MyString
+  state: MyString
+  zipcode: 1
+  photo1: MyString
+  photo2: MyString
+  photo3: MyString
+  min_age: 1
+  max_age: 1
+  min_class_size: 1
+  max_class_size: 1
+  required_gear: false
+  required_gear_desc: MyText
+  cancellation: MyText

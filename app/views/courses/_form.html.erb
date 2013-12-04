@@ -1,0 +1,110 @@
+<div id="course">
+<h1>Add a Course</h1>
+<%= form_for(@course) do |f| %>
+
+  <div class="field_ken">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, :size => 45 %>
+  </div>
+  <div class="field">
+    <%= f.label :course_type, "Course Type" %><br>
+    <%= f.text_field :course_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %><br>
+    <div><%= f.text_area :description, :cols => "50", :rows => "6" %></div>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %><br>
+    <div><%= f.number_field :price %></div>
+  </div>
+
+
+    <div class="field">
+    <%= f.label :address1 %><br>
+    <div><%= f.text_field :address1 %></div>
+  </div>
+
+    <div class="field">
+    <%= f.label :address2 %><br>
+    <div><%= f.text_field :address2 %></div>
+  </div>
+
+    <div class="field">
+    <%= f.label :city %><br>
+    <div><%= f.text_field :city %></div>
+  </div>
+
+    <div class="field">
+    <%= f.label :state %><br>
+    <div><%= select_tag :state, options_for_select(us_states) %></div>
+  </div>
+
+    <div class="field">
+    <%= f.label :zipcode %><br>
+    <div><%= f.number_field :zipcode, :min =>'00000', :max =>'99999'%></div>
+  </div>
+
+   <div class="field">
+    <%= f.label :photo1 %><br>
+    <div><%= f.text_field :photo1 %></div>
+  </div>
+
+  <div class="field">
+    <%= f.label :photo2 %><br>
+    <div><%= f.text_field :photo2 %></div>
+  </div>
+
+  <div class="field">
+    <%= f.label :photo3 %><br>
+    <div><%= f.text_field :photo3 %></div>
+  </div>
+
+  <div class="field">
+    <%= f.label "Minimum Age" %><br>
+    <div><%= f.number_field :min_age %></div>
+  </div>
+
+  <div class="field">
+    <%= f.label "Maximum Age" %><br>
+    <div><%= f.number_field :max_age %></div>
+  </div>
+
+  <div class="field">
+    <%= f.label :min_class_size %><br>
+    <div><%= f.number_field :min_class_size %></div>
+  </div>
+
+  <div class="field">
+    <%= f.label :max_class_size %><br>
+    <div><%= f.number_field :max_class_size %></div>
+  </div>
+
+  <div class="field" id="required_gear">
+    <%= f.label :required_gear %><br>
+    <div><%= f.check_box :required_gear %></div>
+  </div>
+
+  <div class="required_gear_desc">
+    <%= f.label :required_gear_desc %><br>
+    <div><%= f.text_area :required_gear_desc %></div>
+  </div>
+
+  <div class="field">
+    <%= f.label :cancellation %><br>
+    <div><%= f.text_area :cancellation %></div>
+  </div>
+
+
+
+
+ <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
+
+</div>
+

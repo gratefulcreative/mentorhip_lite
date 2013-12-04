@@ -1,0 +1,43 @@
+// Place all the styles related to the Courses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#top search{
+	width:1000px;
+	margin:0 auto;
+}
+
+#front_search_wrapper{
+	left:0;
+	right:0;
+	background:#f00;
+	height:500px;
+}
+
+#front_search_fields_container{
+	width:800px;
+	height:100px;
+	background:#000;	
+
+}
+
+
+.container_front {
+  min-height: 100%;
+  height: auto !important;
+  background:#f9f9f9;
+  width:100%;
+}
+
+.courses_feed{width:1000px;margin:0 auto;}
+
+#course {width:1000px;margin:0 auto;}
+
+#courses_feed_single{width:100%; float:none;padding-top:20px;}
+
+#col_left{background:#ccc;border:5px solid blue; width:25%;height:200px;display:inline;float:left;}
+
+#col_right{background:#ccc;border:5px solid blue; width:75%;height:200px;display:inline;float:right;margin-bottom:20px;}
+
+#clear{clear:both;}

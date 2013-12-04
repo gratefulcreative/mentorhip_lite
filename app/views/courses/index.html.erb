@@ -1,0 +1,57 @@
+<div class="container_front">
+
+<div id="front_search_wrapper">
+
+<div id="front_search">
+<%=search_form_for @search do |f| %>
+
+
+<div class="field" id="front_search">
+    <%= f.label :name_cont, "Name Contains" %><br>
+    <%= f.text_field :name_cont %>
+  </div>
+
+<div class="field" id="front_search">
+    <%= f.label :name_cont, "Name Contains" %><br>
+    <%= f.text_field :name_cont %>
+  </div>
+
+ <div class="actions">
+    <%= f.submit "Search" %>
+</div>
+
+<% end %>
+
+</div><!-- end front_search -->
+</div><!-- end front_search_container -->
+
+
+
+
+<div class="courses_feed">
+
+  <div id="courses_feed_single">
+    <% @courses.each do |course| %>
+    <div id="col_left">
+    test
+    </div><!-- end col_left -->
+
+    <div id="col_right">
+    <h1><%=link_to course.name, course %></h1>
+    <%=course.course_type %>
+    <%=course.price %>
+    <%=truncate(course.description)%>
+    <%=course.city %>
+    </div><!-- end col_right -->
+
+
+  <div><!-- end courses_feed_single -->
+  <div id="clear"></div>
+  
+  <% end %>
+
+</div><!-- end courses_feed -->
+
+</div><!-- end container_front -->
+
+
