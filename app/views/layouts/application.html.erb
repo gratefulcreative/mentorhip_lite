@@ -2,13 +2,40 @@
 <html>
 <head>
   <title>MentorhipLite</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag  "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+<div id="header_container">
 
+<div id="logo">
+<%= image_tag "Mentorhip_logo.png"%>
+</div>
+
+<div id="top_search">
+<%=search_form_for @search do |f| %>
+<div class="field">
+    <%= f.text_field :name_cont, :placeholder => "Search Courses" %>
+  </div>
+
+ <div class="actions">
+    <%= f.submit "Search" %>
+</div>
+
+<% end %>
+</div><!-- end top_search -->
+</div><!-- end header_container -->
+
+</header>
+
+<div id="container">
 <%= yield %>
+</div><!-- end container -->
+
+<footer>
+</footer>
 
 </body>
-</html>
+
