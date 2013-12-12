@@ -1,4 +1,21 @@
 
+
+<div id="top_search">
+<%=search_form_for @search do |f| %>
+<div class="field" id="top_search_input">
+    <%= f.text_field :name_cont, :placeholder => "Search Courses", :style => "width: 200px;" %>
+  </div>
+
+ <div class="actions" id="top_search_input">
+    <%= f.submit "Search" %>
+</div>
+
+<% end %>
+</div><!-- end top_search -->
+</div><!-- end header_left -->
+
+
+
 From courses/index
 
 

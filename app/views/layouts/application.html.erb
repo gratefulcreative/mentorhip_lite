@@ -10,23 +10,44 @@
 <header>
 <div id="header_container">
 
+<div id="header_left">
+
 <div id="logo">
-<%= image_tag "Mentorhip_logo.png"%>
+<%= image_tag "Mentorhip_logo.png "%>
 </div>
 
 <div id="top_search">
-<%=search_form_for @search do |f| %>
-<div class="field">
-    <%= f.text_field :name_cont, :placeholder => "Search Courses" %>
+<%= form_tag courses_path, :method => 'get' do %>
+<div class="field" id="top_search_input">
+      <%= text_field_tag :search, params[:search] %>
   </div>
 
- <div class="actions">
-    <%= f.submit "Search" %>
+ <div class="actions" id="top_search_input">
+    <%= submit_tag "Search", :name => nil %>
 </div>
 
+
 <% end %>
+
+
 </div><!-- end top_search -->
+</div><!-- end header_left -->
+
+
+<div id="header_right">
+<nav>
+	<div class="menu">
+			<ul>
+				<li><a href="#">Sign Up</a></li>
+				<li><a href="#">Log In</a></li>
+				<li><a href="#" class="btn btn-success btn-large">Add a Course</a></li>
+				
+			</ul>
+		</div>
+	</nav>
+</div><!-- end header_right -->
 </div><!-- end header_container -->
+
 
 </header>
 

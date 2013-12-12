@@ -4,15 +4,16 @@ before_action :set_course, only: [:show, :edit, :update, :destroy]
 #before_filter :authenticate_user!
 
 def index
-  @search = Course.search(params[:q])
-  @courses = @search.result
-  @courses = Course.all
+  #@search = Course.search(params[:q])
+  #@courses = @search.result
+  @courses = Course.search(params[:search]) 
+  #@courses = Course.all
 
-  respond_to do |format|
-        format.html
-        format.json {render json: @courses}
+  #respond_to do |format|
+        #format.html
+        #format.json {render json: @courses}
         #format.xml {render xml: @courses}
-  end
+  #end
 end
 
 def new
@@ -72,6 +73,18 @@ def destroy
     format.json { head :no_content }
   end
  end
+
+
+def search
+  @courses = Course.search(params[:search]) 
+
+  respond_to do |format|
+      format.html
+      format.json {render json: @course}
+    end
+end
+
+
 
 
  private

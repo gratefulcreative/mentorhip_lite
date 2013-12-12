@@ -1,10 +1,13 @@
 MentorhipLite::Application.routes.draw do
  
  resources :courses
+
+
  root to: "courses#index"
 
+ #get '/courses/:course_type', to: 'courses#search'
 
-
+ 
 
   # Example resource route with sub-resources:
   #   resources :products do
