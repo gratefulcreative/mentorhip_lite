@@ -8,4 +8,12 @@ def self.search(search)
 		find(:all)
 	end
 end
+
+
+
+
+def to_param
+    "#{id}-#{name}"
+  end
+
 end

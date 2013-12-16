@@ -5,6 +5,8 @@
   <%= stylesheet_link_tag  "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+
+
 </head>
 <body>
 <header>
@@ -13,11 +15,17 @@
 <div id="header_left">
 
 <div id="logo">
-<%= image_tag "Mentorhip_logo.png "%>
+<%= link_to image_tag('Mentorhip_logo.png').html_safe, root_url %>
+<%#image_tag "Mentorhip_logo.png %>
+
 </div>
 
+
+
+
 <div id="top_search">
-<%= form_tag courses_path, :method => 'get' do %>
+<%= form_tag s_path, :method => 'get' do %>
+<form>
 <div class="field" id="top_search_input">
       <%= text_field_tag :search, params[:search] %>
   </div>
@@ -25,7 +33,7 @@
  <div class="actions" id="top_search_input">
     <%= submit_tag "Search", :name => nil %>
 </div>
-
+</form>
 
 <% end %>
 
@@ -38,12 +46,38 @@
 <nav>
 	<div class="menu">
 			<ul>
-				<li><a href="#">Sign Up</a></li>
-				<li><a href="#">Log In</a></li>
-				<li><a href="#" class="btn btn-success btn-large">Add a Course</a></li>
+		
+
+				<% if user_signed_in? %>
+  				<li class="dropdown">
+            	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              	My Account<b class="caret"></b></a>
+            	<ul class="dropdown-menu">
+            	<li><%= link_to('Dashboard', edit_user_registration_path) %></li>
+              	<li><a href="#">Action</a></li>
+              	<li><a href="#">Another action</a></li>
+              	<li><a href="#">Something else here</a></li>
+              	<li class="divider"></li>
+              	<li><a href="#">Separated link</a></li>
+            	</ul>
+          		</li>
+ 
+
+				<% else %>
+  				<li><%= link_to('Sign-Up', new_user_registration_path)  %></li>
+				<% end %>
+
+				<% if user_signed_in? %>
+  				<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+				<% else %>
+  				<li><%= link_to('Login', new_user_session_path)  %></li>
+				<% end %>
+				<li><%= button_to "Add a Course", new_course_path, :class => "button", :method => :get  %></li>
 				
 			</ul>
 		</div>
+		<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p>
 	</nav>
 </div><!-- end header_right -->
 </div><!-- end header_container -->

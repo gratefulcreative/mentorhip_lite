@@ -6,8 +6,9 @@ before_action :set_course, only: [:show, :edit, :update, :destroy]
 def index
   #@search = Course.search(params[:q])
   #@courses = @search.result
+  @courses = Course.all(:order => "created_at DESC")
   @courses = Course.search(params[:search]) 
-  #@courses = Course.all
+  
 
   #respond_to do |format|
         #format.html

@@ -3,6 +3,14 @@ source 'https://rubygems.org'
 
 gem 'bootstrap-sass-rails'
 gem 'ransack'
+gem 'devise'
+gem "paperclip", "~> 3.0"
+gem 'twitter-bootstrap-rails'
+
+#gem 'rmagick'
+gem 'paperclip', "~> 3.0"
+
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

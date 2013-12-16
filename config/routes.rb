@@ -1,9 +1,14 @@
 MentorhipLite::Application.routes.draw do
  
- resources :courses
+  devise_for :users
+  resources :courses 
+
+  root to: "courses#index"
+
+  match '/s' => 's#index', :via => [:get], :as => '/s/'
 
 
- root to: "courses#index"
+  get 'courses/search' => 'courses#search', :as => :courses_search
 
  #get '/courses/:course_type', to: 'courses#search'
 
