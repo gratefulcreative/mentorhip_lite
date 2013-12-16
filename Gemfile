@@ -9,6 +9,7 @@ gem 'twitter-bootstrap-rails'
 
 #gem 'rmagick'
 gem 'paperclip', "~> 3.0"
+#gem 'mysql2'
 
 
 
