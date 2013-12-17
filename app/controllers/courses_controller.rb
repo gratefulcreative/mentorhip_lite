@@ -34,10 +34,10 @@ def create
         format.html { redirect_to @course, notice: 'Course was successfully created.' }
         format.json { render json: @course, status: :created }
 
-        #format.json { render action: 'show', status: :created, location: @recipe }
+        format.json { render action: 'show', status: :created, location: @recipe }
       else
          format.html { render action: 'new' }
-         format.json { render json: @course.errors, status: :unprocessable_entity }
+        format.json { render json: @course.errors, status: :unprocessable_entity }
       end
     end
 
@@ -58,8 +58,12 @@ end
 
 
 def edit
-end
-
+ if current_user != @course.user
+    
+  else
+    redirect_to root_path, notice: "You are not authorized to edit this course."
+  end
+  end
 
 
 def update

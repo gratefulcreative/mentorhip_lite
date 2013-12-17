@@ -1,7 +1,7 @@
 class Course < ActiveRecord::Base
   belongs_to :user
   
-  attr_accessible :name, :course_type, :photo1
+  attr_accessible :name, :course_type, :description, :photo1, :state
 
   mount_uploader :photo1, Photo1Uploader
 
