@@ -1,0 +1,20 @@
+
+<% @users.each do |user| %>
+    <div id="col_left">
+    <%=user.profile_pic %>
+    test
+    </div><!-- end col_left -->
+
+    <div id="col_right">
+    <h1><%=user.firstname %></h1>
+    <%#=course.course_type %>
+    <%#=course.price %>
+    <%#=truncate(course.description)%>
+    <%#=course.city %>
+    </div><!-- end col_right -->
+
+
+  <div><!-- end courses_feed_single -->
+  <div id="clear"></div>
+  
+  <% end %>
