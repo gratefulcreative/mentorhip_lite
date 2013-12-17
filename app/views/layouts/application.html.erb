@@ -16,7 +16,6 @@
 
 <div id="logo">
 <%= link_to image_tag('Mentorhip_logo.png').html_safe, root_url %>
-<%#image_tag "Mentorhip_logo.png %>
 
 </div>
 
@@ -24,18 +23,18 @@
 
 
 <div id="top_search">
-<%#= form_tag s_path, :method => 'get' do %>
+<%= form_tag s_path, :method => 'get' do %>
 <form>
 <div class="field" id="top_search_input">
-      <%#= text_field_tag :search, params[:search] %>
+      <%= text_field_tag :search, params[:search] %>
   </div>
 
  <div class="actions" id="top_search_input">
-    <%#= submit_tag "Search", :name => nil %>
+    <%= submit_tag "Search", :name => nil %>
 </div>
 </form>
 
-<%# end %>
+<% end %>
 
 
 </div><!-- end top_search -->

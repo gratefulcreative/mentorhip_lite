@@ -38,13 +38,14 @@
   <div id="courses_feed_single">
     <% @courses.each do |course| %>
     <div id="col_left">
-    test
+    <%= image_tag course.photo1_url %>
     </div><!-- end col_left -->
 
     <div id="col_right">
     <h1><%=link_to course.name, course %></h1>
     <%=course.course_type %>
     <%=course.price %>
+    
     <%=truncate(course.description)%>
     <%=course.city %>
     </div><!-- end col_right -->
@@ -58,5 +59,8 @@
 </div><!-- end courses_feed -->
 
 </div><!-- end container_front -->
+
+
+<%= paginate @courses %>
 
 

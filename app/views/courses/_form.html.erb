@@ -1,6 +1,6 @@
 <div id="course">
 <h1>Add a Course</h1>
-<%= form_for(@course) do |f| %>
+<%= form_for @course, :html => {:multipart => true } do |f| %>
 
   <div class="field_ken">
     <%= f.label :name %><br>
@@ -49,7 +49,7 @@
 
    <div class="field">
     <%= f.label :photo1 %><br>
-    <div><%= f.text_field :photo1 %></div>
+    <div><%=f.file_field :photo1 %></div>
   </div>
 
   <div class="field">

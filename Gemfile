@@ -1,13 +1,18 @@
 source 'https://rubygems.org'
 
 
+gem 'kaminari' #pagination
+
+gem 'protected_attributes' #needed for Rails 4.0
+
 gem 'bootstrap-sass-rails'
 gem 'ransack'
 gem 'devise'
-gem "paperclip", "~> 3.0"
+gem 'carrierwave'
 gem 'twitter-bootstrap-rails'
 
-#gem 'rmagick'
+
+#gem "rmagick"
 gem 'paperclip', "~> 3.0"
 #gem 'mysql2'
 

@@ -1,6 +1,12 @@
 MentorhipLite::Application.routes.draw do
  
   devise_for :users
+  
+  resources :users
+  get 'users/:id' => 'users#show'
+
+  #get "users/:id"
+
   resources :courses 
 
   root to: "courses#index"
