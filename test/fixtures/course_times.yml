@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  start_time: 2013-12-18 10:05:32
+  end_time: 2013-12-18 10:05:32
+  start_day: 2013-12-18
+  end_day: 2013-12-18
+  belongs_to: 
+
+two:
+  start_time: 2013-12-18 10:05:32
+  end_time: 2013-12-18 10:05:32
+  start_day: 2013-12-18
+  end_day: 2013-12-18
+  belongs_to: 

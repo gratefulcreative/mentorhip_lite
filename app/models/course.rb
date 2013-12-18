@@ -1,7 +1,7 @@
 class Course < ActiveRecord::Base
   belongs_to :user
   
-  attr_accessible :name, :course_type, :description, :photo1, :state
+  attr_accessible :name, :course_type, :description, :photo1, :state, :photo1_file_name
 
   mount_uploader :photo1, Photo1Uploader
 
@@ -12,7 +12,7 @@ class Course < ActiveRecord::Base
 
 def self.search(search)
 	if search
-		find(:all, :conditions => ['course_type LIKE ?', "%#{search}%"])
+		find(:all, :conditions => ['course_type LIKE ?', "%#{search}%"], :order =>'created_at DESC')
 	else
 		find(:all)
 	end

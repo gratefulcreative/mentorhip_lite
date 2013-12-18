@@ -1,5 +1,9 @@
 <div id="course">
 
+<div style="border:1px solid #000;padding:15px;">
+
+<%= @course.photo1_file_name %>
+
 <h1><%=@course.name%></h1></br>
 <p id="notice"><%= notice %></p>
 
@@ -96,8 +100,10 @@
 
 <% if user_signed_in? %>
 <%= link_to 'Edit', edit_course_path %>
+<%= link_to 'Destroy', @course, :confirm => 'Are you sure?', :method => :destroy %>
+
 <% end %>
 
-
+</div><!-- end -->
 
 </div><!-- end course -->

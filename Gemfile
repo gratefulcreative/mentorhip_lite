@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
-
-gem 'kaminari' #pagination
+#gem 'imagemagick'
+#gem "mini_magick", "~> 3.4"
+gem 'kaminari'
 
 gem 'protected_attributes' #needed for Rails 4.0
 
@@ -12,7 +13,6 @@ gem 'carrierwave'
 gem 'twitter-bootstrap-rails'
 
 
-#gem "rmagick"
 gem 'paperclip', "~> 3.0"
 #gem 'mysql2'
 
